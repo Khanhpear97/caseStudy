@@ -1,0 +1,11 @@
+.canvas {
+    border-left: 7px dashed white;
+    border-right: 7px dashed white;
+    background-color: #444444;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: yellowgreen;
+}
