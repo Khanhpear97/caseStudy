@@ -15,19 +15,17 @@ class Car {
     }
     drawCar () {
         this.ctx.beginPath();
-        // this.ctx.fillStyle = "red";
-        // this.ctx.fillRect(this.x, this.y, this.width, this.height);
         this.ctx.drawImage(this.carImg, this.x, this.y, this.width, this.height);
         this.ctx.closePath();
     }
     moveCarLeft () {
         if (this.x >= 7) {
-            this.x -= 27;
+            this.x -= 25;
         }
     }
     moveCarRight () {
         if (this.x <= 493 - this.width) {
-            this.x += 27;
+            this.x += 25;
         }
     }
 }

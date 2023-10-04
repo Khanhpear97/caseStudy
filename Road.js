@@ -9,7 +9,7 @@ class Road {
     }
     drawRoad () {
         this.ctx.beginPath();
-        this.ctx.fillStyle = "#444444";
+        this.ctx.fillStyle = "#626262";
         this.ctx.fillRect(0, 0, this.width, this.height);
         this.ctx.closePath();
 }

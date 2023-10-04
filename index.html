@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Racing Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="canvas" width="500" height="750" class="canvas"></canvas>
-<img id="car" src="photo/car.png" style="display: none" alt="myCar"/>
-<img id="enemy" src="photo/enemy.png" style="display: none" alt="enemyCar"/>
+    <canvas id="canvas" width="500" height="750" class="canvas"></canvas>
+    <img id="car" src="photo/car.png" style="display: none" alt="myCar"/>
+    <img id="enemy" src="photo/enemy.png" style="display: none" alt="enemyCar"/>
+    <img id="enemy2" src="photo/enemy2.png" style="display: none" alt="enemyCar"/>
+    <img id="enemy3" src="photo/enemy3.png" style="display: none" alt="enemyCar"/>
+
+    <h2>Hanoi Racing Boys</h2>
+    <audio controls autoplay loop>
+        <source src="Sound/TokyoDrift.mp3">;
+    </audio>
 
 <script src="Car.js"></script>
 <script src="Road.js"></script>

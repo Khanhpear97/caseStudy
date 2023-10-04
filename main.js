@@ -1,11 +1,15 @@
 // Set map
 let road = new Road(500, 750);
-let life = new Life(3);
-let scores = new Scores(0);
+let life = new Life(5);
+let scores = new Scores(-3);
 road.drawRoad();
-let enemy1 = new Enemy( 0, 0, 60, 110);
-let enemy2 = new Enemy(-330, -300, 60, 110);
-let enemy3 = new Enemy(-600, -600, 60, 110);
+
+// Gain speed
+let speed = 3;
+
+let enemy1 = new Enemy(document.getElementById('enemy') , 0, 750, 60, 110);
+let enemy2 = new Enemy(document.getElementById('enemy2'), -250, 1050, 60, 110);
+let enemy3 = new Enemy(document.getElementById('enemy3'), -550, 1350, 60, 110);
 let car = new Car(215, 620, 70, 120);
 
 // Move down line
@@ -18,22 +22,23 @@ let gameOver = false;
 function render () {
     if (!gameOver){
         road.drawRoad();
-        line1.moveLine();
-        line2.moveLine();
-        line3.moveLine();
-        line4.moveLine();
-        line5.moveLine();
+        scores.gainSpeed();
         line1.drawLine();
         line2.drawLine();
         line3.drawLine();
         line4.drawLine();
         line5.drawLine();
-        enemy1.moveEnemy(scores);
+        line1.moveLine();
+        line2.moveLine();
+        line3.moveLine();
+        line4.moveLine();
+        line5.moveLine();
         enemy1.drawEnemy(car, life, scores);
-        enemy2.moveEnemy(scores);
         enemy2.drawEnemy(car, life, scores);
-        enemy3.moveEnemy(scores);
         enemy3.drawEnemy(car, life, scores);
+        enemy1.moveEnemy(scores);
+        enemy2.moveEnemy(scores);
+        enemy3.moveEnemy(scores);
         scores.drawPoint();
         life.drawPoint();
         car.drawCar();
@@ -43,14 +48,14 @@ function render () {
 }
 render();
 
-window.addEventListener('keydown', (evt) => {
-    let key = evt.keyCode;
-    switch (key) {
-        case 37:
-            car.moveCarLeft();
-            break;
-        case 39:
-            car.moveCarRight();
-            break;
-    }
-})
+    window.addEventListener('keydown', (evt) => {
+        let key = evt.keyCode;
+        switch (key) {
+            case 37:
+                car.moveCarLeft();
+                break;
+            case 39:
+                car.moveCarRight();
+                break;
+        }
+    })

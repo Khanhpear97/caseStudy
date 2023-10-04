@@ -7,5 +7,12 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
-    background-color: yellowgreen;
+    background-color: #a5d5fc;
+}
+h2  {
+    color: #930000;
+    font-size: 35px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
 }

@@ -19,7 +19,7 @@ class Line {
         this.ctx.closePath();
     }
     moveLine () {
-        this.y += 12;
+        this.y += speed + 3;
         if (this.y > 750) {
             this.y = 0;
         }
