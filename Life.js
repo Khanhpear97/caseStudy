@@ -8,6 +8,6 @@ class Life {
     drawPoint () {
         this.ctx.font = '23px Verdana';
         this.ctx.fillStyle = "white";
-        this.ctx.fillText(`Life: ${this.point}`, 370, 60);
+        this.ctx.fillText(`Life: ${this.point}`, 360, 60);
     }
 }

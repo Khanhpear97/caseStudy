@@ -8,7 +8,7 @@ class Scores {
     drawPoint () {
         this.ctx.font = '23px Verdana';
         this.ctx.fillStyle = "white";
-        this.ctx.fillText(`Scores: ${this.point}`, 370, 30);
+        this.ctx.fillText(`Scores: ${this.point}`, 360, 30);
     }
     gainSpeed () {
         if (this.point >= 10 && this.point < 25) {

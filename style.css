@@ -7,10 +7,13 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
+    background-image: url("photo/background.jpg");
+    background-position: center;
+    background-size: 1800px;
     background-color: #a5d5fc;
 }
 h2  {
-    color: #930000;
+    color: #ffd500;
     font-size: 35px;
     margin-top: 5px;
     font-family: sans-serif;
