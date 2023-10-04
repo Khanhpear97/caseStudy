@@ -19,6 +19,7 @@ let line3 = new Line('line3',-300);
 let line4 = new Line('line4',-450);
 let line5 = new Line('line5',-600);
 let gameOver = false;
+
 function render () {
     if (!gameOver){
         road.drawRoad();
@@ -48,14 +49,21 @@ function render () {
 }
 render();
 
-    window.addEventListener('keydown', (evt) => {
-        let key = evt.keyCode;
-        switch (key) {
-            case 37:
-                car.moveCarLeft();
-                break;
-            case 39:
-                car.moveCarRight();
-                break;
-        }
-    })
+window.addEventListener('keydown', (evt) => {
+    let key = evt.keyCode;
+    switch (key) {
+        case 37:
+            car.moveCarLeft();
+            break;
+        case 39:
+            car.moveCarRight();
+            break;
+        case 13:
+            if (gameOver === true) {
+                location.reload();
+            }
+            break;
+    }
+})
+
+
